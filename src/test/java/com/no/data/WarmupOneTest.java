@@ -1,5 +1,6 @@
 package com.no.data;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class WarmupOneTest {
@@ -13,4 +14,10 @@ public class WarmupOneTest {
     @Test
     public void sleepOnVacationWeekday(){}
 
+    @Test
+    public void sleepIn(){
+        Assert.assertEquals(true, WarmupOne.sleepIn(false, false));
+        Assert.assertEquals(false, WarmupOne.sleepIn(true, false));
+        Assert.assertEquals(true, WarmupOne.sleepIn(false, true));
+    }
 }
